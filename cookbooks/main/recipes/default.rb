@@ -70,3 +70,4 @@
 
 require_recipe 'delayed_job'
 require_recipe 'mysql2'
+require_recipe 'gems'

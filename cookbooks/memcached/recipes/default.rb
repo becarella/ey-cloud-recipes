@@ -9,6 +9,8 @@ node[:applications].each do |app_name,data|
 
 case node[:instance_role]
  when "solo", "app", "app_master"
+   return if node[:master_app_server].nil? || node[:master_app_server][:private_dns_name].nil?
+   
    template "/data/#{app_name}/shared/config/memcached_custom.yml" do
      source "memcached.yml.erb"
      owner user[:username]

@@ -67,7 +67,3 @@
 #uncomment to include the mysql_administrative_tools recipe
 # additional configuration of this recipe is required
 #require_recipe "mysql_administrative_tools"
-
-require_recipe 'delayed_job'
-require_recipe 'mysql2'
-require_recipe 'gems'
